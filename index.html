@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Asheron server bot field manual: command meanings, setup flow, staff actions, tickets, suggestions, voice channels, and games.">
+    <title>Asheron Server Bot Manual</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Asheron manual home">
+        <span class="brand-mark">A</span>
+        <span>
+          <strong>Asheron</strong>
+          <small>server bot manual</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Manual navigation">
+        <a href="#start">Start</a>
+        <a href="#members">Members</a>
+        <a href="#staff">Staff</a>
+        <a href="#systems">Systems</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">Restricted server field manual</p>
+          <h1>Asheron command reference</h1>
+          <p class="lede">This guide is for our server only. Use it to understand what each bot command does, when to run it, and what will happen after you press enter.</p>
+          <div class="hero-actions" aria-label="Jump links">
+            <a class="button primary" href="#members">Member commands</a>
+            <a class="button secondary" href="#staff">Staff commands</a>
+          </div>
+        </div>
+
+        <aside class="terminal" aria-label="Command terminal preview">
+          <div class="terminal-top">
+            <span>ASHERON // OPS</span>
+            <span>ONLINE</span>
+          </div>
+          <div class="terminal-body">
+            <p><span>&gt;</span> /health</p>
+            <p class="response">Checks whether the server config, channels, panels, and loaded commands are working.</p>
+            <p><span>&gt;</span> /ticket</p>
+            <p class="response">Opens private help threads with staff controls and transcripts.</p>
+            <p><span>&gt;</span> /vc</p>
+            <p class="response">Controls temporary voice channels owned by members.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="start" class="band">
+        <div class="section-heading">
+          <p class="eyebrow">Start here</p>
+          <h2>What this bot is for</h2>
+          <p>Asheron is built around this server's staff workflow: setup, logs, tickets, suggestions, moderation history, welcome panels, temporary voice channels, and a few server games.</p>
+        </div>
+        <div class="status-grid">
+          <article>
+            <strong>Members</strong>
+            <span>Use tickets, suggestions, reports, counting, lore commands, and temporary voice controls.</span>
+          </article>
+          <article>
+            <strong>Staff</strong>
+            <span>Use moderation actions, history checks, notes, dashboard tools, announcements, and system panels.</span>
+          </article>
+          <article>
+            <strong>Admins</strong>
+            <span>Use setup, health, config, welcome, counting setup, and dashboard commands to maintain the server.</span>
+          </article>
+        </div>
+      </section>
+
+      <section id="members" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Member channel</p>
+          <h2>Commands members may see</h2>
+          <p>These commands and panels are meant for normal server use. Some actions may be handled through buttons instead of typed commands.</p>
+        </div>
+
+        <div class="command-grid">
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/ticket</h3>
+              <span>Private help</span>
+            </div>
+            <p>Creates ticket panels for support, reports, business, appeals, or other server needs.</p>
+            <dl>
+              <dt>Use when</dt>
+              <dd>You need staff help without posting in public channels.</dd>
+              <dt>What happens</dt>
+              <dd>Asheron creates a private thread, pings staff, and keeps controls for claiming, closing, reopening, and transcripts.</dd>
+            </dl>
+          </article>
+
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/suggest</h3>
+              <span>Ideas</span>
+            </div>
+            <p>Posts a suggestion panel where members can submit ideas through a form.</p>
+            <dl>
+              <dt>Use when</dt>
+              <dd>You want to suggest a change, event, channel, rule, feature, or server improvement.</dd>
+              <dt>What happens</dt>
+              <dd>Asheron creates a tracked suggestion thread with voting and staff status controls.</dd>
+            </dl>
+          </article>
+
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/report</h3>
+              <span>Safety</span>
+            </div>
+            <p>Sends a report to staff for review.</p>
+            <dl>
+              <dt>Use when</dt>
+              <dd>You need staff to look at a user, message, situation, or rule issue.</dd>
+              <dt>What happens</dt>
+              <dd>The report is tracked for staff, connected to history, and can be reviewed later.</dd>
+            </dl>
+          </article>
+
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/vc</h3>
+              <span>Voice control</span>
+            </div>
+            <p>Manages temporary voice channels created for server members.</p>
+            <dl>
+              <dt>Use when</dt>
+              <dd>You own a temporary VC and need to lock, unlock, rename, limit, permit, remove, transfer, or delete it.</dd>
+              <dt>What happens</dt>
+              <dd>Asheron changes the channel permissions or settings for your current temp VC.</dd>
+            </dl>
+          </article>
+
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/counting</h3>
+              <span>Game</span>
+            </div>
+            <p>Runs the server counting game.</p>
+            <dl>
+              <dt>Use when</dt>
+              <dd>You want to check the current count, leaderboard, or game status.</dd>
+              <dt>What happens</dt>
+              <dd>Asheron tracks numbers, mistakes, and leaderboard stats in the configured counting channel.</dd>
+            </dl>
+          </article>
+
+          <article class="command-card">
+            <div class="command-title">
+              <h3>/asheron</h3>
+              <span>Lore</span>
+            </div>
+            <p>Runs Asheron-themed interactions.</p>
+            <dl>
+              <dt>/asheron quote</dt>
+              <dd>Sends an Asheron directive.</dd>
+              <dt>/asheron signal</dt>
+              <dd>Starts the Signal Decode mini-game.</dd>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section id="staff" class="section dark">
+        <div class="section-heading">
+          <p class="eyebrow">Staff channel</p>
+          <h2>Moderation commands</h2>
+          <p>These commands are for staff. They create records so future staff can understand what happened and why.</p>
+        </div>
+
+        <div class="table-wrap" role="region" aria-label="Moderation command table">
+          <table>
+            <thead>
+              <tr>
+                <th>Command</th>
+                <th>Meaning</th>
+                <th>Use it when</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>/warn</code></td>
+                <td>Records a warning for a member.</td>
+                <td>A rule issue needs a formal note but not a timeout, kick, or ban.</td>
+              </tr>
+              <tr>
+                <td><code>/timeout</code></td>
+                <td>Temporarily restricts a member from chatting.</td>
+                <td>A situation needs immediate cooling down for a set duration.</td>
+              </tr>
+              <tr>
+                <td><code>/kick</code></td>
+                <td>Removes a member from the server.</td>
+                <td>The user can return later, but should be removed now.</td>
+              </tr>
+              <tr>
+                <td><code>/ban</code></td>
+                <td>Bans a user and logs the reason.</td>
+                <td>The user should not be able to rejoin.</td>
+              </tr>
+              <tr>
+                <td><code>/purge</code></td>
+                <td>Deletes a batch of recent messages.</td>
+                <td>A channel needs cleanup after spam, clutter, or rule-breaking messages.</td>
+              </tr>
+              <tr>
+                <td><code>/note</code></td>
+                <td>Adds a private staff note to a member.</td>
+                <td>Staff need context that should not be visible to the member.</td>
+              </tr>
+              <tr>
+                <td><code>/history</code></td>
+                <td>Shows infractions, staff notes, tickets, reports, and suggestions.</td>
+                <td>You need context before making a moderation decision.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="systems" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Admin systems</p>
+          <h2>Server maintenance commands</h2>
+          <p>Use these when setting up or maintaining the server. They affect channels, panels, logs, and saved configuration.</p>
+        </div>
+
+        <div class="system-list">
+          <article>
+            <h3>/setup quick</h3>
+            <p>Creates the core Asheron server structure: staff roles, logging channels, ticket areas, suggestion setup, dashboard pieces, and starter panels.</p>
+            <strong>Run this first on a fresh server.</strong>
+          </article>
+          <article>
+            <h3>/health</h3>
+            <p>Checks loaded commands, saved config, modules, and whether important Discord channels or assets can still be found.</p>
+            <strong>Run this after setup or after moving channels.</strong>
+          </article>
+          <article>
+            <h3>/config view</h3>
+            <p>Shows the current bot configuration so staff can see what Asheron believes is active.</p>
+            <strong>Use this before troubleshooting.</strong>
+          </article>
+          <article>
+            <h3>/config backup</h3>
+            <p>Exports the server configuration as JSON.</p>
+            <strong>Use this before major server changes.</strong>
+          </article>
+          <article>
+            <h3>/dashboard post</h3>
+            <p>Posts or refreshes the staff dashboard in the chosen channel.</p>
+            <strong>Use this when staff tools need a clean control point.</strong>
+          </article>
+          <article>
+            <h3>/welcome rules</h3>
+            <p>Posts a rules acknowledgement panel and can grant a role when members accept.</p>
+            <strong>Use this in the welcome or rules channel.</strong>
+          </article>
+          <article>
+            <h3>/announce draft</h3>
+            <p>Starts an editable announcement draft before posting it to an announcement channel.</p>
+            <strong>Use this for clean staff-approved announcements.</strong>
+          </article>
+          <article>
+            <h3>/counting setup</h3>
+            <p>Chooses the counting channel and starts the game state.</p>
+            <strong>Use this before members begin counting.</strong>
+          </article>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="section-heading">
+          <p class="eyebrow">Troubleshooting</p>
+          <h2>FAQ</h2>
+        </div>
+        <details open>
+          <summary>Why can I not see a command?</summary>
+          <p>You may not have permission, the command may be staff-only, or slash commands may need to be deployed again.</p>
+        </details>
+        <details>
+          <summary>What should admins run first?</summary>
+          <p>Run <code>/setup quick</code>, then run <code>/health</code>. If anything is missing, fix that before posting member panels.</p>
+        </details>
+        <details>
+          <summary>What should staff check before moderating?</summary>
+          <p>Use <code>/history</code> when context matters. It helps connect reports, notes, infractions, tickets, and suggestions.</p>
+        </details>
+        <details>
+          <summary>Is this bot meant for other servers?</summary>
+          <p>No. This manual is written for our server's Asheron bot and its current workflow.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>ASHERON // SERVER BOT MANUAL</p>
+      <a href="#top">Return to top</a>
+    </footer>
+  </body>
+</html>
